@@ -9,13 +9,13 @@
                 @foreach($blog as $b)
                     <div class="rq-blog-items rq-image-post">
                         <div class="rq-blog-img-wrapper">
-                            <img src="{{asset('public/img/placeholder-770.jpg')}}" alt="Blog Image">
+                            <img src="{{asset('public/img/blog/'.$b->image)}}" alt="Blog Image">
                             <div class="rq-blog-cat-icon"><i class="ion-ios-camera-outline"></i></div>
                         </div>
 
                         <div class="rq-blog-item-details">
-                            <h3><a href="{{url('detail')}}">lets drink cofee</a></h3>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demo of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bou denounce with righteous dream</p>
+                            <h3><a href="{{url('detail/'.$b->id)}}">{{$b->title}}</a></h3>
+                            <p>{{$b->message}}</p>
                             <span class="rq-blog-post-date">March 20, 2016</span>
                         </div>
                     </div>
@@ -69,9 +69,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rq-sidebar-widget rq-category-widget">
+                    {{-- <div class="rq-sidebar-widget rq-category-widget">
                         <h3 class="rq-sidebar-title">Catagories</h3>
-
                         <ul>
                             <li><a href="#">Programming</a></li>
                             <li><a href="#">Real Estate</a></li>
@@ -79,7 +78,7 @@
                             <li><a href="#">Food &amp; Cafe</a></li>
                             <li><a href="#">Google Map</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

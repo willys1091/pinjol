@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\contact;
-use App\Models\blog;
+use App\Models\blogheader;
 
 class MainController extends Controller{
     public function index(){
@@ -14,7 +14,7 @@ class MainController extends Controller{
 
     public function blog(){
         $data['title']='Blog | Butuhuang';
-        $data['blog'] = blog::where('active','1')->get();
+        $data['blog'] = blogheader::where('active','1')->get();
         return view('blog',$data);
     }
 
